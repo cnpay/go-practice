@@ -23,5 +23,7 @@ https://github.com/golang/vscode-go/blob/master/docs/debugging.md#snippets
 3. 同一目录下文件package声明必须一致
 
 
-### NOTE:
+### TIPS:
 1. 所有的函数默认都是同目录/包可见的，不可重名，变量也是 -> TODO: 如何禁止?
+2. 普通类库用Testing练习，只有客户、服务器需要创建比较多的测试目录
+3. 关闭buildOnSave

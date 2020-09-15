@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"testing"
 )
 
 type Phone interface {
@@ -21,7 +22,7 @@ func (jphone JPhone) call() {
 	fmt.Println("i'm jphone")
 }
 
-func main() {
+func Test(t *testing.T) {
 	var phone Phone //狗日的，为什么的类型一定在后面，fuck
 
 	phone = new(IPhone)

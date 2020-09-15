@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
+	"testing"
 )
 
-func main() {
+/*TestArray nothing */
+func TestArray(t *testing.T) {
 	var n [10]int
 	var i, j int
 

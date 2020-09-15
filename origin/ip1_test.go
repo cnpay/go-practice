@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func main2() {
 	if len(os.Args) != 2 {
 		fmt.Fprintf(os.Stderr, "usage:%s ip-addr\n", os.Args[0])
 		os.Exit(1)

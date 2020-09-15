@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"testing"
+	"time"
+)
 
-func main() {
+func Test_channel(t *testing.T) {
 	fmt.Println("outter")
 
 	c := make(chan bool)

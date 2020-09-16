@@ -27,3 +27,12 @@ https://github.com/golang/vscode-go/blob/master/docs/debugging.md#snippets
 1. 所有的函数默认都是同目录/包可见的，不可重名，变量也是 -> TODO: 如何禁止?
 2. 普通类库用Testing练习，只有客户、服务器需要创建比较多的测试目录
 3. 关闭buildOnSave
+
+
+### gui调试:
+直接调试go文件，qt和fyne的编译时间都很长, 可以先build, 创建独立的launch选项解决
+https://github.com/therecipe/qt 调试编译时间过长
+https://github.com/fyne-io/fyne 调试编译时间稍短，但也长
+
+### git忽略可执行文件
+https://stackoverflow.com/questions/5711120/gitignore-without-binary-files

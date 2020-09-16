@@ -6,7 +6,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch go file",
+            "name": "go file",
             "type": "go",
             "request": "launch",
             "mode": "auto",
@@ -15,7 +15,16 @@
             "args": []
         },
         {
-            "name": "Launch test function",
+            "name": "exe file",
+            "type": "go",
+            "request": "launch",
+            "mode": "exec",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "env": {},
+            "args": []
+        },        
+        {
+            "name": "test function",
             "type": "go",
             "showLog": true,
             "trace": "log",

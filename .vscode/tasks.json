@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "go build -o ${fileDirname}/${fileBasenameNoExtension} ${file}",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "rm this exe",
+            "type": "shell",
+            "command": "rm ${fileDirname}/${fileBasenameNoExtension}",
+            "problemMatcher": []
+        },
+        {
+            "label": "rm all exe",
+            "type": "shell",
+            "command": "find . -executable -type f -not -path '*/\\.git/*' | xargs rm ",
+            "problemMatcher": []
+        }
+    ]
+}

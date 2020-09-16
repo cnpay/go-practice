@@ -30,9 +30,11 @@ https://github.com/golang/vscode-go/blob/master/docs/debugging.md#snippets
 
 
 ### gui调试:
-直接调试go文件，qt和fyne的编译时间都很长, 可以先build, 创建独立的launch选项解决
+1. fyne和qt都要求在自己的main文件运行，所以需要创建多个目录
+2. 直接调试go文件，qt和fyne的编译时间都很长, 可以先build, 创建独立的launch选项解决
 https://github.com/therecipe/qt 调试编译时间过长
 https://github.com/fyne-io/fyne 调试编译时间稍短，但也长
+3. build已创建tasks,ctr+shift+b
 
 ### git忽略可执行文件
 https://stackoverflow.com/questions/5711120/gitignore-without-binary-files

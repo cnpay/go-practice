@@ -21,7 +21,9 @@
             "mode": "exec",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "env": {},
-            "args": []
+            "args": [],
+            "preLaunchTask": "build",
+            "postDebugTask": "rm_this_exe"
         },        
         {
             "name": "test function",

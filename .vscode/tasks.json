@@ -14,13 +14,13 @@
             }
         },
         {
-            "label": "rm this exe",
+            "label": "rm_this_exe",
             "type": "shell",
             "command": "rm ${fileDirname}/${fileBasenameNoExtension}",
             "problemMatcher": []
         },
         {
-            "label": "rm all exe",
+            "label": "rm_all_exe",
             "type": "shell",
             "command": "find . -executable -type f -not -path '*/\\.git/*' | xargs rm ",
             "problemMatcher": []

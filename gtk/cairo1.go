@@ -7,10 +7,10 @@ import (
 )
 
 const (
-	KEY_LEFT  uint = 65361
-	KEY_UP    uint = 65362
-	KEY_RIGHT uint = 65363
-	KEY_DOWN  uint = 65364
+	_KeyLeft  uint = 65361
+	_KeyUp    uint = 65362
+	_KeyRight uint = 65363
+	_KeyDown  uint = 65364
 )
 
 func main() {
@@ -30,10 +30,10 @@ func main() {
 	x := 0.0
 	y := 0.0
 	keyMap := map[uint]func(){
-		KEY_LEFT:  func() { x-- },
-		KEY_UP:    func() { y-- },
-		KEY_RIGHT: func() { x++ },
-		KEY_DOWN:  func() { y++ },
+		_KeyLeft:  func() { x-- },
+		_KeyUp:    func() { y-- },
+		_KeyRight: func() { x++ },
+		_KeyDown:  func() { y++ },
 	}
 
 	// Event handlers
@@ -44,7 +44,7 @@ func main() {
 	})
 
 	window.Connect("key-press-event", func(win *gtk.Window, ev *gdk.Event) {
-		keyEvent := &gdk.EventKey{ev}
+		keyEvent := &gdk.EventKey{Event: ev}
 		if move, found := keyMap[keyEvent.KeyVal()]; found {
 			move()
 			win.QueueDraw()

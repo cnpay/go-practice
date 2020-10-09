@@ -17,13 +17,13 @@ func main() {
 	gtk.Init(nil)
 
 	// gui boilerplate
-	win, _ := gtk.WindowNew(gtk.WINDOW_TOPLEVEL)
-	da, _ := gtk.DrawingAreaNew()
-	win.Add(da)
-	win.SetTitle("小方块")
-	win.Connect("destroy", gtk.MainQuit)
-	win.SetDefaultSize(800, 600)
-	win.ShowAll()
+	window, _ := gtk.WindowNew(gtk.WINDOW_TOPLEVEL)
+	drawArea, _ := gtk.DrawingAreaNew()
+	window.Add(drawArea)
+	window.SetTitle("小方块")
+	window.Connect("destroy", gtk.MainQuit)
+	window.SetDefaultSize(800, 600)
+	window.ShowAll()
 
 	// Data
 	unitSize := 20.0
@@ -37,13 +37,13 @@ func main() {
 	}
 
 	// Event handlers
-	da.Connect("draw", func(da *gtk.DrawingArea, cr *cairo.Context) {
+	drawArea.Connect("draw", func(da *gtk.DrawingArea, cr *cairo.Context) {
 		cr.SetSourceRGB(0, 0, 0)
 		cr.Rectangle(x*unitSize, y*unitSize, unitSize, unitSize)
 		cr.Fill()
 	})
 
-	win.Connect("key-press-event", func(win *gtk.Window, ev *gdk.Event) {
+	window.Connect("key-press-event", func(win *gtk.Window, ev *gdk.Event) {
 		keyEvent := &gdk.EventKey{ev}
 		if move, found := keyMap[keyEvent.KeyVal()]; found {
 			move()
